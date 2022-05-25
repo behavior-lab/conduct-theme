@@ -1,0 +1,117 @@
+@use "sass:math";
+
+#footer {
+    padding: 0.5em 1em;
+    overflow: hidden;
+    margin-left: 220px;
+    background: $brand-secondary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+
+        &.meta {
+        }
+
+        &.env li {
+            padding: 5px 10px;
+            margin: -5px 0;
+            border-radius: 0;
+
+            &:not(.production) {
+                color: white;
+                font-weight: bold;
+            }
+
+            &.local {
+                background-color: red;
+            }
+            &.development {
+                background-color: orangered;
+            }
+            &.test,
+            &.testing {
+                background-color: blue;
+            }
+            &.stage,
+            &.staging {
+                background-color: green;
+            }
+        }
+
+        &.extra {
+            float: right;
+        }
+
+        li {
+            color: darken($gray-lighter, 20%);
+            display: inline-block;
+            font-size: $font-size-sm;
+
+            &:not(:last-child) {
+                margin-right: 0.75em;
+            }
+
+            &.logo {
+                margin-right: 1em;
+
+                img {
+                    height: 2em;
+                    margin-top: -0.5em;
+                    display: inline-block;
+                }
+            }
+
+            &.footprint {
+                span {
+                    color: darken($gray-lighter, 15%);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #footer {
+        margin-left: 0;
+
+        ul {
+            display: block;
+
+            &.extra {
+                margin-top: $spacer-y;
+                float: none !important;
+
+                li {
+                    width: 100%;
+                    margin-top: math.div($spacer-y,2) !important;
+
+                    select,
+                    .btn {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #footer {
+        ul {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}

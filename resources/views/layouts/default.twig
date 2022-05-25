@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        {% include "theme::partials/metadata" %}
+    </head>
+    <body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }} display--{{ preference_value('behavior_lab.theme.conduct::display', 'default') }} sidebars--{{ preference_value('behavior_lab.theme.conduct::sidebars', 'default') }}"
+          data-variants="8">
+        <section id="app">
+            {% set active_entry = '' %}
+            {% for entry in template.cp.navigation %}
+                {% if entry.active %}
+                    {% set active_entry = entry %}
+                {% endif %}
+            {% endfor %}
+            {% include "theme::partials/topbar" %}
+{#            {% if '/admin/pages' not in url() or '/admin/pages/types' in url() or '/admin/pages/fields' in url() %}#}
+{#            {% if '/admin/pages' not in url() %}#}
+            {% if active_entry.slug not in ['anomaly.module.dashboard','anomaly.module.pages','anomaly.module.posts','anomaly.module.files','anomaly.module.users','anomaly.module.navigation','dk_behavior.module.ax_shop'] %}
+                {% include "theme::partials/sidebar" %}
+            {% endif %}
+            {% include "theme::partials/menu" %}
+            <main id="main" style="min-height: 1500px;">
+                <div class="container-fluid">
+                    {% include "theme::partials/messages" %}
+                    {% include "theme::partials/buttons" %}
+                </div>
+                {% block content %}{% endblock %}
+            </main>
+            {% include "theme::partials/footer" %}
+            {% include "theme::partials/modals" %}
+        </section>
+        {% include "theme::partials/assets" %}
+    </body>
+</html>

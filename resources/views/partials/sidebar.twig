@@ -1,0 +1,22 @@
+<aside id="sidebar" class="scrollbar {{ preference_value('behavior_lab.theme.conduct::sidebar_hover', setting_value('behavior_lab.theme.conduct::sidebar_hover')) ? 'hover' }}">
+    <ul>
+        {% for key, navigation in template.cp.navigation %}
+            {% if active_entry.slug starts with 'anomaly.module' and navigation.slug not in ['anomaly.module.pages','anomaly.module.users','anomaly.module.navigation'] and navigation.slug starts with 'anomaly.module' %}
+            <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
+                <a {{ html_attributes(navigation.attributes) }} title="{{ trans(navigation.title) }}">
+                    <span class="icon">{{ navigation.icon()|raw }}</span>
+                    <span class="title">{{ trans(navigation.title) }}</span>
+                </a>
+            </li>
+            {% elseif not (active_entry.slug starts with 'anomaly.module') and navigation.slug not in ['dk_behavior.module.ax_shop'] and not (navigation.slug starts with 'anomaly.module') %}
+                <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
+                    <a {{ html_attributes(navigation.attributes) }} title="{{ trans(navigation.title) }}">
+                        <span class="icon">{{ navigation.icon()|raw }}</span>
+                        <span class="title">{{ trans(navigation.title) }}</span>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</aside>

@@ -1,0 +1,45 @@
+tbody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+
+  td:first-child {
+    display: none;
+  }
+
+  td[data-title="Preview"] {
+    height: 150px;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  td[data-title="Name"] {
+    text-align: center;
+
+    strong {
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    small {
+      display: none;
+    }
+  }
+
+  td[data-title="Size"], td[data-title="MIME Type"] {
+    display: none;
+  }
+  td[data-title="Folder"] {
+    font-size: 12px;
+    width: 100% !important;
+    text-align: center;
+  }
+}

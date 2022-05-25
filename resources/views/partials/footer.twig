@@ -1,0 +1,39 @@
+<section id="footer">
+
+    <ul class="meta">
+        <li class="delivery">
+            Delivered by Behavior Lab
+        </li>
+        <li class="footprint">
+            {{ request_time() }} <span>|</span> {{ memory_usage() }}
+        </li>
+    </ul>
+
+    <ul class="env">
+        <li class="{{ env('APP_ENV') }}">
+            Environment: {{ env('APP_ENV') | capitalize }}
+        </li>
+    </ul>
+
+    <ul class="extra">
+{#        <li class="language">#}
+{#            <select class="custom-select" onchange="window.location = '?_locale=' + this.value;">#}
+{#                {% for iso in config('streams::locales.supported')|keys %}#}
+{#                    <option value="{{ iso }}" {{ config('app.locale') == iso ? 'selected' }}>#}
+{#                        {{ trans('streams::locale.' ~ iso ~ '.name') }} ({{ iso }})#}
+{#                    </option>#}
+{#                {% endfor %}#}
+{#            </select>#}
+{#        </li>#}
+{#        <li class="help">#}
+{#            <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#modal-help">#}
+{#                {{ icon('question-circle') }} {{ trans('behavior_lab.theme.conduct::control_panel.help') }}#}
+{#            </a>#}
+{#        </li>#}
+        <li class="version">
+            Conduct is build on top of {{ config('streams::distribution.name') }} {{ config('streams::distribution.version') }} & Laravel
+            {{ app.version }}
+        </li>
+    </ul>
+
+</section>

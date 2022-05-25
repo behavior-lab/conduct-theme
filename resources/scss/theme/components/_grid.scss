@@ -1,0 +1,11 @@
+.grid {
+  .image-container {
+    img {
+      max-height: 200px;
+      height: 200px;
+      &:not([src^="/"]) {
+        min-height: 200px;
+      }
+    }
+  }
+}

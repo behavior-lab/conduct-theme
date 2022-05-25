@@ -1,0 +1,72 @@
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>{{ setting('streams::name') | default(env('APPLICATION_NAME')) }}{{ env('APP_ENV') != 'production' ? ' (' ~ env('APP_ENV') ~ ')' : '' }}
+    &#8250; {{ trans('behavior_lab.theme.conduct::control_panel.title') }}
+    &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+
+{# Favicons #}
+{{ favicons("behavior_lab.theme.conduct::img/favicon.png") }}
+
+{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/fonts.css", ["parse"]) }}
+{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/fa5.css", ["parse"]) }}
+{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/bootstrap.css") }}
+
+{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/vendor/*") }}
+{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/theme/polyfills.js") }}
+{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/libraries/tether.min.js") }}
+
+{{ asset_add(
+    "build.css",
+    "behavior_lab.theme.conduct::css/theme.css",
+    [
+        "required",
+        "as:t4t5/sweetalert.css",
+        "as:jshjohnson/Choices.css",
+        "as:rstacruz/nprogress.css",
+    ]
+) }}
+
+{{ asset_add(
+    "theme.js",
+    "behavior_lab.theme.conduct::js/libraries/*",
+    [
+        "required",
+        "as:t4t5/sweetalert.js",
+        "as:RubaXa/Sortable.js",
+        "as:jshjohnson/Choices.js",
+        "as:rstacruz/nprogress.js",
+        "as:js-cookie/js-cookie.js",
+        "as:ccampbell/mousetrap.js",
+    ]
+) }}
+
+{# Need to figure out globing to scripts.js - ends up with a /* file #}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/ajax.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/confirm.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/initialize.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/keyboard.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/modal.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/prompt.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/push.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/search.js") }}
+{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/alert.js") }}
+
+{#<style type="text/css">#}
+{#{{ asset_inline("theme.css") }}#}
+{#{{ asset_inline("build.css") }}#}
+{#</style>#}
+{{ asset_style("theme.css") }}
+{{ asset_style("build.css") }}
+
+{% if locale().isRtl() %}
+    {{ asset_inline("behavior_lab.theme.conduct::css/bootstrap.rtl.css") }}
+    {{ asset_inline("behavior_lab.theme.conduct::css/rtl.css") }}
+{% endif %}
+
+{{ constants() }}
+
+{{ asset_script("theme.js") }}

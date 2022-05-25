@@ -1,0 +1,36 @@
+{
+    "name": "behavior_lab/conduct-theme",
+    "type": "streams-addon",
+    "description": "The admin theme for PyroCMS by Behavior Lab.",
+    "keywords": [
+        "cms",
+        "addon",
+        "theme",
+        "pyrocms",
+        "laravel"
+    ],
+    "homepage": "http://behaviorlab.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Behavior Lab",
+            "email": "chb@behaviorlab.io",
+            "homepage": "http://behaviorlab.io/",
+            "role": "Owner"
+        },
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "ryan@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@behaviorlab.io"
+    },
+    "autoload": {
+        "psr-4": {
+            "BehaviorLab\\ConductTheme\\": "src/"
+        }
+    }
+}

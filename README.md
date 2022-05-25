@@ -1,3 +1,3 @@
-# Accelerant Theme
+# Conduct Theme
 
-The official control panel theme for PyroCMS.
+The admin theme for PyroCMS by Behavior Lab.

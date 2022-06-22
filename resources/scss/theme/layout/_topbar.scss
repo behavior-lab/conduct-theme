@@ -140,7 +140,7 @@
         border-bottom-width: 3px;
         border-bottom-style: solid;
 
-        a {
+        > a {
           color: #eeeeee !important;
           margin-bottom: -3px;
         }
@@ -149,7 +149,7 @@
   }
 
   .nav {
-    > li {
+    > li.nav-item {
       margin-left: 0;
 
       > a {
@@ -200,7 +200,7 @@
   }
 
   .dropdown-menu {
-    margin: 0;
+    margin: 3px 0 0;
     z-index: 998;
     min-width: 10rem;
     max-height: 70vh;
@@ -214,11 +214,12 @@
       display: block;
 
       i {
-        color: #a8a8a8;
+        color: $brand-secondary;
         margin-right: .4rem;
       }
 
       a {
+        color: $brand-secondary !important;
         display: block;
       }
     }

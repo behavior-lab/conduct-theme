@@ -16,9 +16,13 @@
     //:not(.repeater-field_type):not(.file-field_type)
     &.text-field_type,
     &.boolean-field_type,
+    &.integer-field_type,
     &.textarea-field_type,
+    &.datetime-field_type,
+    &.email-field_type,
     &.url-field_type,
-    &.select-field_type {
+    &.select-field_type,
+    &.slug-field_type, {
       display: grid;
       grid-template-columns: 200px auto;
     }

@@ -5,7 +5,6 @@
             {{ img('theme::img/conduct-logotype.svg').data|raw }}
         </a>
     </div>
-
     <div class="navbar navbar-default">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
@@ -42,7 +41,7 @@
                 <li class="nav-item variant-border dropdown {{ active_entry.slug not in ['dk_behavior.module.ax_shop'] and not (active_entry.slug starts with 'anomaly.module') ? 'active' }}">
                     <a href="#" data-toggle="dropdown">
                         <i class="icon {{ trans('theme::control_panel.topbar_sections.modules.icon') }}"></i>
-                        <span class="title">{{ trans('theme::control_panel.topbar_sections.settings.name') }}</span>
+                        <span class="title">{{ trans('theme::control_panel.topbar_sections.modules.name') }}</span>
                     </a>
 
                     <ul class="dropdown-menu-left dropdown-menu">

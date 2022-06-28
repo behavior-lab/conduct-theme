@@ -123,6 +123,7 @@
         }
       }
 
+      .nav-item.open,
       .nav-item:hover {
         box-sizing: border-box;
         border-bottom-width: 3px;
@@ -216,6 +217,8 @@
       i {
         color: $brand-secondary;
         margin-right: .4rem;
+        width: 18px;
+        text-align: center;
       }
 
       a {

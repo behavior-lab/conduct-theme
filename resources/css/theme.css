@@ -326,11 +326,13 @@
 #topbar .navbar-default .navbar-nav.navbar-right .nav-item:not(:last-of-type) {
   margin-right: 5px;
 }
+#topbar .navbar-default .navbar-nav .nav-item.open,
 #topbar .navbar-default .navbar-nav .nav-item:hover {
   box-sizing: border-box;
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }
+#topbar .navbar-default .navbar-nav .nav-item.open > a,
 #topbar .navbar-default .navbar-nav .nav-item:hover > a {
   margin-bottom: -3px;
 }
@@ -399,6 +401,8 @@
 #topbar .dropdown-menu .dropdown-item i {
   color: #29363A;
   margin-right: 0.4rem;
+  width: 18px;
+  text-align: center;
 }
 #topbar .dropdown-menu .dropdown-item a {
   color: #29363A !important;

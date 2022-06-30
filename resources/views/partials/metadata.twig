@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <title>{{ setting('streams::name') | default(env('APPLICATION_NAME')) }}{{ env('APP_ENV') != 'production' ? ' (' ~ env('APP_ENV') ~ ')' : '' }}
-    &#8250; {{ trans('behavior_lab.theme.conduct::control_panel.title') }}
+    &#8250; {{ trans('conduct_lab.theme.conduct::control_panel.title') }}
     &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
 
 {# Favicons #}
-{{ favicons("behavior_lab.theme.conduct::img/favicon.png") }}
+{{ favicons("conduct_lab.theme.conduct::img/favicon.png") }}
 
-{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/fonts.css", ["parse"]) }}
-{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/fa5.css", ["parse"]) }}
-{{ asset_add("theme.css", "behavior_lab.theme.conduct::css/bootstrap.css") }}
+{{ asset_add("theme.css", "conduct_lab.theme.conduct::css/fonts.css", ["parse"]) }}
+{{ asset_add("theme.css", "conduct_lab.theme.conduct::css/fa5.css", ["parse"]) }}
+{{ asset_add("theme.css", "conduct_lab.theme.conduct::css/bootstrap.css") }}
 
-{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/vendor/*") }}
-{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/theme/polyfills.js") }}
-{{ asset_add("theme.js", "behavior_lab.theme.conduct::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "conduct_lab.theme.conduct::js/vendor/*") }}
+{{ asset_add("theme.js", "conduct_lab.theme.conduct::js/theme/polyfills.js") }}
+{{ asset_add("theme.js", "conduct_lab.theme.conduct::js/libraries/tether.min.js") }}
 
 {{ asset_add(
     "build.css",
-    "behavior_lab.theme.conduct::css/theme.css",
+    "conduct_lab.theme.conduct::css/theme.css",
     [
         "required",
         "as:t4t5/sweetalert.css",
@@ -32,7 +32,7 @@
 
 {{ asset_add(
     "theme.js",
-    "behavior_lab.theme.conduct::js/libraries/*",
+    "conduct_lab.theme.conduct::js/libraries/*",
     [
         "required",
         "as:t4t5/sweetalert.js",
@@ -45,15 +45,15 @@
 ) }}
 
 {# Need to figure out globing to scripts.js - ends up with a /* file #}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/ajax.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/confirm.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/initialize.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/keyboard.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/modal.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/prompt.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/push.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/search.js") }}
-{{ asset_add("scripts.js", "behavior_lab.theme.conduct::js/theme/alert.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/ajax.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/confirm.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/initialize.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/keyboard.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/modal.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/prompt.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/push.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/search.js") }}
+{{ asset_add("scripts.js", "conduct_lab.theme.conduct::js/theme/alert.js") }}
 
 {#<style type="text/css">#}
 {#{{ asset_inline("theme.css") }}#}
@@ -63,8 +63,8 @@
 {{ asset_style("build.css") }}
 
 {% if locale().isRtl() %}
-    {{ asset_inline("behavior_lab.theme.conduct::css/bootstrap.rtl.css") }}
-    {{ asset_inline("behavior_lab.theme.conduct::css/rtl.css") }}
+    {{ asset_inline("conduct_lab.theme.conduct::css/bootstrap.rtl.css") }}
+    {{ asset_inline("conduct_lab.theme.conduct::css/rtl.css") }}
 {% endif %}
 
 {{ constants() }}

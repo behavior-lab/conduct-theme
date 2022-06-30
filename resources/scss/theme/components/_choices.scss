@@ -49,7 +49,7 @@ $choices-button-offset: 8px !default;
     margin: 0;
   }
   .#{$choices-selector}__button {
-    background-image: url('{{ img("behavior_lab.theme.conduct::img/choices/cross-inverse.svg").path }}');
+    background-image: url('{{ img("conduct_lab.theme.conduct::img/choices/cross-inverse.svg").path }}');
     padding: 0;
     background-size: 8px;
     height: 100%;

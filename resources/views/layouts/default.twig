@@ -3,7 +3,7 @@
     <head>
         {% include "theme::partials/metadata" %}
     </head>
-    <body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }} display--{{ preference_value('behavior_lab.theme.conduct::display', 'default') }} sidebars--{{ preference_value('behavior_lab.theme.conduct::sidebars', 'default') }}"
+    <body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }} display--{{ preference_value('conduct_lab.theme.conduct::display', 'default') }} sidebars--{{ preference_value('conduct_lab.theme.conduct::sidebars', 'default') }}"
           data-variants="8">
         <section id="app">
             {% set active_entry = '' %}

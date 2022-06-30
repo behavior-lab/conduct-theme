@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ConductTheme;
+<?php namespace ConductLab\ConductTheme;
 
 use Anomaly\Streams\Platform\Addon\Theme\Theme;
 

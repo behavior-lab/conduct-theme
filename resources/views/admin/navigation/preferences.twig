@@ -1,9 +1,9 @@
-{{ asset_add('scripts.js', 'behavior_lab.theme.conduct::js/navigation/jquery-sortable.js') }}
-{{ asset_add('scripts.js', 'behavior_lab.theme.conduct::js/navigation/preferences.js') }}
+{{ asset_add('scripts.js', 'conduct_lab.theme.conduct::js/navigation/jquery-sortable.js') }}
+{{ asset_add('scripts.js', 'conduct_lab.theme.conduct::js/navigation/preferences.js') }}
 
 <p>
     {{ icon('fa fa-arrows') }}
-    {{ trans('behavior_lab.theme.conduct::preference.navigation.reorder')|raw }}
+    {{ trans('conduct_lab.theme.conduct::preference.navigation.reorder')|raw }}
 
     <input type="hidden" id="navigation-order" name="navigation" value="{{ field_type.value }}">
 </p>

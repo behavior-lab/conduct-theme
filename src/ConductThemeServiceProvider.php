@@ -1,11 +1,11 @@
-<?php namespace BehaviorLab\ConductTheme;
+<?php namespace ConductLab\ConductTheme;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 use Anomaly\Streams\Platform\Ui\ControlPanel\Component\Navigation\Event\SortNavigation;
 use Illuminate\Pagination\AbstractPaginator;
-use BehaviorLab\ConductTheme\Http\Controller\Admin\PreferencesController;
-use BehaviorLab\ConductTheme\Http\Controller\Admin\SettingsController;
-use BehaviorLab\ConductTheme\Listener\ApplySorting;
+use ConductLab\ConductTheme\Http\Controller\Admin\PreferencesController;
+use ConductLab\ConductTheme\Http\Controller\Admin\SettingsController;
+use ConductLab\ConductTheme\Listener\ApplySorting;
 
 /**
  * Class ConductThemeServiceProvider
@@ -29,8 +29,8 @@ class ConductThemeServiceProvider extends AddonServiceProvider
     ];
 
     protected $overrides = [
-        'streams::form/partials/wrapper' => 'behavior_lab.theme.conduct::overrides/field_wrapper',
-        'streams::form/partials/translations' => 'behavior_lab.theme.conduct::overrides/field_translations',
+        'streams::form/partials/wrapper' => 'conduct_lab.theme.conduct::overrides/field_wrapper',
+        'streams::form/partials/translations' => 'conduct_lab.theme.conduct::overrides/field_translations',
     ];
 
     /**
@@ -38,7 +38,7 @@ class ConductThemeServiceProvider extends AddonServiceProvider
      */
     public function register()
     {
-        AbstractPaginator::$defaultView       = 'behavior_lab.theme.conduct::pagination/bootstrap-4';
+        AbstractPaginator::$defaultView       = 'conduct_lab.theme.conduct::pagination/bootstrap-4';
         AbstractPaginator::$defaultSimpleView = 'streams::pagination/simple-bootstrap-4';
     }
 }

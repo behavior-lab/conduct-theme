@@ -1,4 +1,4 @@
-<aside id="sidebar" class="scrollbar {{ preference_value('behavior_lab.theme.conduct::sidebar_hover', setting_value('behavior_lab.theme.conduct::sidebar_hover')) ? 'hover' }}">
+<aside id="sidebar" class="scrollbar {{ preference_value('conduct_lab.theme.conduct::sidebar_hover', setting_value('conduct_lab.theme.conduct::sidebar_hover')) ? 'hover' }}">
     <ul>
         {% for key, navigation in template.cp.navigation %}
             {% if active_entry.slug starts with 'anomaly.module' and navigation.slug not in ['anomaly.module.pages','anomaly.module.users','anomaly.module.navigation'] and navigation.slug starts with 'anomaly.module' %}

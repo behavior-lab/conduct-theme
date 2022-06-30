@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ConductTheme\Listener;
+<?php namespace ConductLab\ConductTheme\Listener;
 
 use Anomaly\PreferencesModule\Preference\Contract\PreferenceRepositoryInterface;
 use Anomaly\SettingsModule\Setting\Contract\SettingRepositoryInterface;
@@ -50,11 +50,11 @@ class ApplySorting
         $builder    = $event->getBuilder();
         $navigation = $builder->getNavigation();
 
-        if ($settings = $this->settings->value('behavior_lab.theme.conduct::navigation')) {
+        if ($settings = $this->settings->value('conduct_lab.theme.conduct::navigation')) {
             $navigation = array_merge(array_flip((array)json_decode($settings)), $navigation);
         }
 
-        if ($preferences = $this->preferences->value('behavior_lab.theme.conduct::navigation')) {
+        if ($preferences = $this->preferences->value('conduct_lab.theme.conduct::navigation')) {
             $navigation = array_merge(array_flip((array)json_decode($preferences)), $navigation);
         }
 

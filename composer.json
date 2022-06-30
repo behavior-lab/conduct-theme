@@ -1,5 +1,5 @@
 {
-    "name": "behavior_lab/conduct-theme",
+    "name": "conduct_lab/conduct-theme",
     "type": "streams-addon",
     "description": "The admin theme for PyroCMS by Behavior Lab.",
     "keywords": [
@@ -9,13 +9,13 @@
         "pyrocms",
         "laravel"
     ],
-    "homepage": "http://behaviorlab.io/",
+    "homepage": "http://ConductLab.io/",
     "license": "MIT",
     "authors": [
         {
             "name": "Behavior Lab",
-            "email": "chb@behaviorlab.io",
-            "homepage": "http://behaviorlab.io/",
+            "email": "chb@ConductLab.io",
+            "homepage": "http://ConductLab.io/",
             "role": "Owner"
         },
         {
@@ -26,11 +26,11 @@
         }
     ],
     "support": {
-        "email": "support@behaviorlab.io"
+        "email": "support@ConductLab.io"
     },
     "autoload": {
         "psr-4": {
-            "BehaviorLab\\ConductTheme\\": "src/"
+            "ConductLab\\ConductTheme\\": "src/"
         }
     }
 }

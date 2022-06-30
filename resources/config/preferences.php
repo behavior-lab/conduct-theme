@@ -4,7 +4,7 @@ return [
     'sidebar_hover' => 'anomaly.field_type.boolean',
     'navigation'    => [
         'type'       => 'anomaly.field_type.textarea',
-        'input_view' => 'behavior_lab.theme.conduct::admin/navigation/preferences',
+        'input_view' => 'conduct_lab.theme.conduct::admin/navigation/preferences',
     ],
     'display'       => [
         'required' => true,
@@ -13,8 +13,8 @@ return [
             'default_value' => 'default',
             'mode'          => 'dropdown',
             'options'       => [
-                'default' => 'behavior_lab.theme.conduct::preference.display.option.default',
-                'compact' => 'behavior_lab.theme.conduct::preference.display.option.compact',
+                'default' => 'conduct_lab.theme.conduct::preference.display.option.default',
+                'compact' => 'conduct_lab.theme.conduct::preference.display.option.compact',
             ],
         ],
     ],
@@ -23,8 +23,8 @@ return [
         'type'     => 'anomaly.field_type.select',
         'config'   => [
             'options'       => [
-                'default' => 'behavior_lab.theme.conduct::preference.sidebars.option.default',
-                'static'  => 'behavior_lab.theme.conduct::preference.sidebars.option.static',
+                'default' => 'conduct_lab.theme.conduct::preference.sidebars.option.default',
+                'static'  => 'conduct_lab.theme.conduct::preference.sidebars.option.static',
             ],
             'default_value' => 'default',
             'mode'          => 'dropdown',

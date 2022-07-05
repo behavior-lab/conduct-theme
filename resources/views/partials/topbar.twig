@@ -14,12 +14,12 @@
                         <span class="title">{{ trans('theme::control_panel.topbar_sections.pages.name') }}</span>
                     </a>
                 </li>
-                <li class="nav-item variant-border {{ active_entry.slug == 'anomaly.module.posts' ? 'active' }}">
-                    <a href="/admin/posts">
-                        <i class="icon {{ trans('theme::control_panel.topbar_sections.posts.icon') }}"></i>
-                        <span class="title">{{ trans('theme::control_panel.topbar_sections.posts.name') }}</span>
-                    </a>
-                </li>
+{#                <li class="nav-item variant-border {{ active_entry.slug == 'anomaly.module.posts' ? 'active' }}">#}
+{#                    <a href="/admin/posts">#}
+{#                        <i class="icon {{ trans('theme::control_panel.topbar_sections.posts.icon') }}"></i>#}
+{#                        <span class="title">{{ trans('theme::control_panel.topbar_sections.posts.name') }}</span>#}
+{#                    </a>#}
+{#                </li>#}
                 <li class="nav-item variant-border {{ active_entry.slug == 'anomaly.module.files' ? 'active' }}">
                     <a href="/admin/files">
                         <i class="icon {{ trans('theme::control_panel.topbar_sections.files.icon') }}"></i>
@@ -57,7 +57,7 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li class="nav-item variant-border dropdown  {{ active_entry.slug not in ['anomaly.module.dashboard','anomaly.module.pages','anomaly.module.posts','anomaly.module.files','anomaly.module.users','anomaly.module.navigation'] and active_entry.slug starts with 'anomaly.module' ? 'active' }}">
+                <li class="nav-item variant-border dropdown  {{ active_entry.slug not in ['anomaly.module.dashboard','anomaly.module.pages','anomaly.module.posts','anomaly.module.files','anomaly.module.users'] and active_entry.slug starts with 'anomaly.module' ? 'active' }}">
                     <a href="#" data-toggle="dropdown">
                         <i class="icon {{ trans('theme::control_panel.topbar_sections.settings.icon') }}"></i>
                         <span class="title">{{ trans('theme::control_panel.topbar_sections.settings.name') }}</span>
@@ -65,7 +65,7 @@
 
                     <ul class="dropdown-menu-left dropdown-menu">
                         {% for key, navigation in template.cp.navigation %}
-                            {% if navigation.slug not in ['anomaly.module.dashboard','anomaly.module.users','anomaly.module.navigation'] and navigation.slug starts with 'anomaly.module' %}
+                            {% if navigation.slug not in ['anomaly.module.dashboard','anomaly.module.users'] and navigation.slug starts with 'anomaly.module' %}
                                 <li class="dropdown-item">
                                     <a {{ html_attributes(navigation.attributes) }}>
                                         {{ navigation.icon()|raw }}

@@ -1,14 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-@font-face {
-  font-family: 'TTNormsPro-Bold';
-  font-style: normal;
-  font-weight: 700;
-  font-display: block;
-
-  src: url('{{ asset_path("theme::fonts/tt-norms-pro/TT Norms Pro Bold.woff2") }}') format('woff2');
-}
-
 #main {
   overflow: visible;
   padding-top: 70px;
@@ -1189,9 +1179,13 @@ ul.tree li.collapsed > ul {
     display: inline-block;
   }
 }
+.grid .image-container {
+  height: 200px;
+}
 .grid .image-container img {
   max-height: 200px;
-  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .grid .image-container img:not([src^="/"]) {
   min-height: 200px;

@@ -4636,6 +4636,9 @@ readers do not read off random characters that represent icons */
 .fa-arrows:before {
   content: "\f338"; }
 
+.fa-external-link:before {
+  content: "\f35d"; }
+
 #sidebar .fa-dashboard:before {
   content: "\f201"; }
 

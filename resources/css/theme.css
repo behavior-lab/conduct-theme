@@ -1,4 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@font-face {
+  font-family: 'TTNormsPro-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+
+  src: url('{{ asset_path("theme::fonts/tt-norms-pro/TT Norms Pro Bold.woff2") }}') format('woff2');
+}
+
 #main {
   overflow: visible;
   padding-top: 70px;

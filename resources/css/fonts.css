@@ -12639,3 +12639,13 @@ readers do not read off random characters that represent icons */
 .fa-long-arrow-right:before {
   content: "\f054";
 }
+
+
+@font-face {
+  font-family: 'TTNormsPro-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+
+  src: url('{{ asset_path("theme::fonts/tt-norms-pro/TT Norms Pro Bold.woff2") }}') format('woff2');
+}

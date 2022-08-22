@@ -22,7 +22,10 @@
     &.email-field_type,
     &.url-field_type,
     &.select-field_type,
-    &.slug-field_type, {
+    &.slug-field_type,
+    &.tags-field_type,
+    &.decimal-field_type,
+    &.checkboxes-field_type, {
       display: grid;
       grid-template-columns: 200px auto;
     }

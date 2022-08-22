@@ -986,7 +986,7 @@ body.display--compact #menu {
   padding-bottom: 0;
   border-bottom: none;
 }
-.form .field-group .form-group:not(.hidden).text-field_type, .form .field-group .form-group:not(.hidden).boolean-field_type, .form .field-group .form-group:not(.hidden).integer-field_type, .form .field-group .form-group:not(.hidden).textarea-field_type, .form .field-group .form-group:not(.hidden).datetime-field_type, .form .field-group .form-group:not(.hidden).email-field_type, .form .field-group .form-group:not(.hidden).url-field_type, .form .field-group .form-group:not(.hidden).select-field_type, .form .field-group .form-group:not(.hidden).slug-field_type {
+.form .field-group .form-group:not(.hidden).text-field_type, .form .field-group .form-group:not(.hidden).boolean-field_type, .form .field-group .form-group:not(.hidden).integer-field_type, .form .field-group .form-group:not(.hidden).textarea-field_type, .form .field-group .form-group:not(.hidden).datetime-field_type, .form .field-group .form-group:not(.hidden).email-field_type, .form .field-group .form-group:not(.hidden).url-field_type, .form .field-group .form-group:not(.hidden).select-field_type, .form .field-group .form-group:not(.hidden).slug-field_type, .form .field-group .form-group:not(.hidden).tags-field_type, .form .field-group .form-group:not(.hidden).decimal-field_type, .form .field-group .form-group:not(.hidden).checkboxes-field_type {
   display: grid;
   grid-template-columns: 200px auto;
 }
@@ -1094,6 +1094,9 @@ ul.tree li .card .buttons {
 }
 ul.tree li .card > span {
   margin-left: 6px;
+}
+ul.tree li .card:hover {
+  background: #BBBCC1;
 }
 ul.tree li .card:hover > .buttons {
   display: block;

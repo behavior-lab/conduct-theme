@@ -8,7 +8,7 @@
                     <span class="title">{{ trans(navigation.title) }}</span>
                 </a>
             </li>
-            {% elseif not (active_entry.slug starts with 'anomaly.module') and navigation.slug not in ['dk_behavior.module.ax_shop'] and not (navigation.slug starts with 'anomaly.module') %}
+            {% elseif not (active_entry.slug starts with 'anomaly.module') and navigation.slug not in ['dk_behavior.module.ax_shop', 'dk_behavior.module.download', 'dk_behavior.module.scroll_to_discover'] and not (navigation.slug starts with 'anomaly.module') %}
                 <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
                     <a {{ html_attributes(navigation.attributes) }} title="{{ trans(navigation.title) }}">
                         <span class="icon">{{ navigation.icon()|raw }}</span>

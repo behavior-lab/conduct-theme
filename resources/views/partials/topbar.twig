@@ -32,13 +32,13 @@
                         <span class="title">{{ trans('theme::control_panel.topbar_sections.users.name') }}</span>
                     </a>
                 </li>
-                <li class="nav-item variant-border {{ active_entry.slug == 'dk_behavior.module.ax_shop' ? 'active' }}">
-                    <a href="/admin/ax_shop">
-                        <i class="icon fas fa-tags"></i>
-                        <span class="title">{{ trans('dk_behavior.module.ax_shop::addon.title') }}</span>
-                    </a>
-                </li>
-                <li class="nav-item variant-border dropdown {{ active_entry.slug not in ['dk_behavior.module.ax_shop'] and not (active_entry.slug starts with 'anomaly.module') ? 'active' }}">
+{#                <li class="nav-item variant-border {{ active_entry.slug == 'dk_behavior.module.ax_shop' ? 'active' }}">#}
+{#                    <a href="/admin/ax_shop">#}
+{#                        <i class="icon fas fa-tags"></i>#}
+{#                        <span class="title">{{ trans('dk_behavior.module.ax_shop::addon.title') }}</span>#}
+{#                    </a>#}
+{#                </li>#}
+                <li class="nav-item variant-border dropdown {{ active_entry.slug not in ['dk_behavior.module.ax_shop', 'dk_behavior.module.download', 'dk_behavior.module.scroll_to_discover'] and not (active_entry.slug starts with 'anomaly.module') ? 'active' }}">
                     <a href="#" data-toggle="dropdown">
                         <i class="icon {{ trans('theme::control_panel.topbar_sections.modules.icon') }}"></i>
                         <span class="title">{{ trans('theme::control_panel.topbar_sections.modules.name') }}</span>
@@ -46,7 +46,7 @@
 
                     <ul class="dropdown-menu-left dropdown-menu">
                         {% for key, navigation in template.cp.navigation %}
-                            {% if navigation.slug not in ['dk_behavior.module.ax_shop'] and not (navigation.slug starts with 'anomaly.module') %}
+                            {% if navigation.slug not in ['dk_behavior.module.ax_shop', 'dk_behavior.module.download', 'dk_behavior.module.scroll_to_discover'] and not (navigation.slug starts with 'anomaly.module') %}
                                 <li class="dropdown-item">
                                     <a {{ html_attributes(navigation.attributes) }}>
                                         {{ navigation.icon()|raw }}
